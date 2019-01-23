@@ -56,7 +56,7 @@ def create_choice(request):
 @api_view(['GET'])
 def get_choices(request, key):
     if request.method == 'GET':
-        question = Question.objects.get(question_key=key)
+        question = get_object_or_404(Question, question_key=key)
         choices = question.choice_set.all()
         serializer = ChoiceSerializer(choices, many=True)
         return Response(serializer.data)
@@ -67,7 +67,7 @@ def get_choices(request, key):
 @api_view(['GET'])
 def question_detail(request, key):
     if request.method == 'GET':
-        question = Question.objects.get(question_key=key)
+        question = get_object_or_404(Question, question_key=key)
         serializer = QuestionSerializer(question)
         return Response(serializer.data)
 
