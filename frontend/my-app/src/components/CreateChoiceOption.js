@@ -8,14 +8,12 @@ export class CreateChoiceOption extends Component {
    
     var items = this.props.options.map( x=> {
         return(
-            <div key={x}>
+            <div key={x} className="text">
                 <label>
-                    <input type="text" name="Question" />
+                    <input type="text" name="choice" />
                     <button onClick={(e) => { 
                         e.preventDefault();
                         this.props.deleteOption(x);
-
-                        
                         }}>Delete</button>
                 </label>
             </div>
