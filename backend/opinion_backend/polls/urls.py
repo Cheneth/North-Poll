@@ -8,7 +8,4 @@ urlpatterns = [
     path('get_choices/<key>', views.get_choices),
     path('polls/<key>', views.question_detail),
     path('<key>/<c_id>/', views.vote),
-
-
-    #path('polls/<int:pk>/', views.snippet_detail),
 ]
