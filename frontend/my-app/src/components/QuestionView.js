@@ -23,16 +23,7 @@ export class QuestionView extends Component {
      this.getQuestionKey();
     }
 
-  // state = {
-  //     questionKey : 'dWSGs7akYr',
-  //     choiceID : 0,
-  //     choices: getQuestionKey()
-  // };
-  // refreshChoiceList(){
-  //     this.setState({choices : this.state.choices})
-  // }
-
-  handleSubmit(event){//TODO TAKE THE LOGGED VALUE AND MAKE IT INTO A POST REQUEST TO VOTE
+  handleSubmit(event){//sends a get request to vote on a question
     var self = this;  
     event.preventDefault();
      // console.log(this.state.questionKey);
@@ -41,7 +32,7 @@ export class QuestionView extends Component {
       this.getQuestionKey();
   }
 
-  getQuestionKey() {
+  getQuestionKey() {//obtain question choices based on teh question key
 
     var self = this;
 

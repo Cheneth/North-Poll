@@ -40,17 +40,6 @@ export class CreateQuestion extends Component {
     this.setState({ options : options });
   }
 
-//   editOption(choiceText, choiceNumber){//update the option's text
-//     var options = this.state.options;
-//     for(i = 0; i < options.length; i++){
-//         if(options[i].choiceNumber === choiceNumber ){
-//             options[i].choiceText = choiceText;
-//             this.setState({ options });
-//         }
-//     }
-
-//   }
-
     handleSubmit(event){//send new question object to server
         event.preventDefault();
         var self = this;

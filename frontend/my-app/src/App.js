@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 
 class App extends Component {
-  render() {
+  render() {//routing for the user to create a question or view a question
     return (
       <Router>
         <div className="App">
